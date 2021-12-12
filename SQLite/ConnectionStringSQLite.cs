@@ -19,6 +19,13 @@ namespace DataLibrary
         {
             return  "Data Source = " + Database;
         }
+
+        public override List<string> GetProperties()
+        {
+            List<string> properties = new List<string>();
+            properties.Add(Database);
+            return properties;
+        }
     }
 }
 

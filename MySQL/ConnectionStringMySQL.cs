@@ -39,5 +39,15 @@ namespace DataLibrary
                 return string.Format("server={0};userid={1};password={2};database={3}", Server, UserId, Password, Database);
             }
         }
+
+        public override List<string> GetProperties()
+        {
+            List<string> properties = new List<string>();
+            properties.Add(Server);
+            properties.Add(UserId);
+            properties.Add(Password);
+            properties.Add(Database);
+            return properties;
+        }
     }
 }
